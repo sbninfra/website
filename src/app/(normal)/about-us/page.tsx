@@ -1,7 +1,14 @@
-import Link from 'next/link';
-import React from 'react';
+import { Metadata } from "next";
+import Link from "next/link";
+import React from "react";
 
-export const runtime = 'edge';
+export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about SBN Infra Project Private Limited — a trusted name in construction, delivering high-quality industrial, commercial, and urban projects across India. With over two decades of experience, we are driven by passion, innovation, and a commitment to excellence.",
+};
 
 const Page = () => {
   return (
@@ -43,24 +50,24 @@ function HeroSection() {
 
 const aboutUsData = [
   {
-    dataNumber: '12+',
-    title: ' Contracting Years',
-    subTitle: 'Delivering excellence in construction with proven expertise.',
+    dataNumber: "12+",
+    title: " Contracting Years",
+    subTitle: "Delivering excellence in construction with proven expertise.",
   },
   {
-    dataNumber: '160+',
-    title: 'Active Team Members',
-    subTitle: 'A skilled workforce ensuring quality and efficiency.',
+    dataNumber: "160+",
+    title: "Active Team Members",
+    subTitle: "A skilled workforce ensuring quality and efficiency.",
   },
   {
-    dataNumber: '30%',
-    title: 'Annual Team Growth',
-    subTitle: 'Expanding expertise and scaling operations every year.',
+    dataNumber: "30%",
+    title: "Annual Team Growth",
+    subTitle: "Expanding expertise and scaling operations every year.",
   },
   {
-    dataNumber: '5+',
-    title: 'States Across India',
-    subTitle: 'Strengthening our presence with quality infrastructure.',
+    dataNumber: "5+",
+    title: "States Across India",
+    subTitle: "Strengthening our presence with quality infrastructure.",
   },
 ];
 
@@ -104,7 +111,7 @@ function OurValue() {
             Driven by Passion, Grounded in Quality.
           </p>
         </div>
-        <Link href={'/contact-us'} className=" w-fit md:self-end md:ml-auto">
+        <Link href={"/contact-us"} className=" w-fit md:self-end md:ml-auto">
           <p className=" rounded-3xl px-6 py-3 md:text-xl cursor-pointer hover:bg-primary-blue/90 duration-200 text-white bg-primary-blue font-semibold">
             Contact Us
           </p>
@@ -126,10 +133,10 @@ function OurValue() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             {[
-              'Quality & Excellence',
-              'Creative Innovation',
-              'Sustainable Practices',
-              'Safety Commitment',
+              "Quality & Excellence",
+              "Creative Innovation",
+              "Sustainable Practices",
+              "Safety Commitment",
             ].map((element, index) => {
               return (
                 <div
@@ -159,10 +166,10 @@ function OurValue() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             {[
-              'Empowered Leadership',
-              'Efficiency & Speed',
-              'Innovative Approach',
-              'Client Satisfaction',
+              "Empowered Leadership",
+              "Efficiency & Speed",
+              "Innovative Approach",
+              "Client Satisfaction",
             ].map((element, index) => {
               return (
                 <div

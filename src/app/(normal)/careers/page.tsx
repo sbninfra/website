@@ -1,7 +1,14 @@
-import Link from 'next/link';
-import React from 'react';
+import { Metadata } from "next";
+import Link from "next/link";
+import React from "react";
 
-export const runtime = 'edge';
+export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Explore career opportunities at SBN Infra Project Private Limited — one of India's leading construction companies. Join a team driven by innovation, collaboration, and excellence, and build a future shaping large-scale industrial, commercial, and urban infrastructure projects.",
+};
 
 const Page = () => {
   return (
@@ -56,13 +63,13 @@ function HeroSection() {
       <p className=" max-w-6xl mt-6  text-sm md:text-lg text-gray-700 w-full mx-auto p-4">
         Join our team and be part of a company that values integrity, teamwork,
         and professional growth. If you&apos;re ready to build a rewarding
-        career with us, send your resume to{' '}
+        career with us, send your resume to{" "}
         <Link
-          href={'mailto:info@sbninfra.in'}
+          href={"mailto:info@sbninfra.in"}
           className=" font-semibold text-blue-600"
         >
           info@sbninfra.in
-        </Link>{' '}
+        </Link>{" "}
         and take the first step toward an exciting future.
       </p>
     </div>
