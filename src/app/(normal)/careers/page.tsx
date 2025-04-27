@@ -5,7 +5,7 @@ import React from "react";
 export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "Careers",
   description:
     "Explore career opportunities at SBN Infra Project Private Limited — one of India's leading construction companies. Join a team driven by innovation, collaboration, and excellence, and build a future shaping large-scale industrial, commercial, and urban infrastructure projects.",
 };

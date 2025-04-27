@@ -5,7 +5,7 @@ import ProjectsSection from "./projectSection";
 export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "Projects",
   description:
     "Discover the diverse range of projects by SBN Infra Project Private Limited, showcasing our expertise in industrial, commercial, and urban infrastructure. With a commitment to quality, precision, and innovation, we are building the future of India's infrastructure.",
 };

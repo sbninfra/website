@@ -4,7 +4,7 @@ import React from "react";
 export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "Privacy Policy",
   description:
     "Read the Privacy Policy of SBN Infra Project Private Limited to understand how we collect, use, and protect your personal information. We are committed to safeguarding your privacy and ensuring a secure experience on our website.",
 };

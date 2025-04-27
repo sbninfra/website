@@ -151,9 +151,9 @@ export default Footer;
 
 const navLinks = [
   { name: "Home", slug: "/" },
-  { name: "Projects", slug: "/projects" },
   { name: "Careers", slug: "/careers" },
   { name: "About Us", slug: "/about-us" },
+  { name: "Projects", slug: "/projects" },
   { name: "Contact us", slug: "/contact-us" },
   { name: "Privacy Policy", slug: "/privacy-policy" },
 ];
