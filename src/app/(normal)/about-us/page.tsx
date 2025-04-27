@@ -111,7 +111,11 @@ function OurValue() {
             Driven by Passion, Grounded in Quality.
           </p>
         </div>
-        <Link href={"/contact-us"} className=" w-fit md:self-end md:ml-auto">
+        <Link
+          prefetch={false}
+          href={"/contact-us"}
+          className=" w-fit md:self-end md:ml-auto"
+        >
           <p className=" rounded-3xl px-6 py-3 md:text-xl cursor-pointer hover:bg-primary-blue/90 duration-200 text-white bg-primary-blue font-semibold">
             Contact Us
           </p>

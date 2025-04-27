@@ -1,20 +1,65 @@
-'use client';
-import Footer from '@/components/footer';
-import NavBar from '@/components/navBar';
+import Footer from "@/components/footer";
+import NavBar from "@/components/navBar";
 import {
   ArrowRight,
   Construction,
   HardHat,
   LucideIcon,
   PencilRuler,
-} from 'lucide-react';
-import Image from 'next/image';
-import { projectsData } from '@/consts/projects';
-import { motion } from 'motion/react';
-import Link from 'next/link';
-import Marquee from 'react-fast-marquee';
+} from "lucide-react";
+import Image from "next/image";
+import { projectsData } from "@/consts/projects";
+import Link from "next/link";
+import Marquee from "react-fast-marquee";
+import { Metadata } from "next";
+import { SectionHeading } from "./sectionHeading";
 
-export const runtime = 'edge';
+export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "SBN INFRA PROJECT PRIVATE LIMITED",
+  description:
+    "SSBN INFRA PROJECT PRIVATE LIMITED is a premier construction company based in Haryana, India. We specialize in industrial, commercial, residential, and infrastructure projects, delivering excellence with trust and innovation.",
+  keywords: [
+    "Construction Company in Haryana",
+    "Top Construction Company India",
+    "Best Construction Services Haryana",
+    "Infrastructure Development Company",
+    "Industrial Construction Haryana",
+    "Commercial Construction Projects",
+    "Residential Builders in Haryana",
+    "Top Builders in India",
+    "Turnkey Construction Solutions",
+    "Design and Build Construction Company",
+    "Civil Engineering Companies Haryana",
+    "Best Infrastructure Companies India",
+    "Warehouse Construction Haryana",
+    "Building Contractors Haryana",
+    "Top 10 Construction Companies in India",
+    "Large Scale Construction Projects India",
+    "Construction Company Near Me",
+    "Trusted Construction Company Haryana",
+    "Leading Builders India",
+    "Best Civil Contractors Haryana",
+  ],
+  openGraph: {
+    title: "SBN INFRA PROJECT PRIVATE LIMITED",
+    description:
+      "Discover SBN INFRA PROJECT PRIVATE LIMITED, a trusted construction company delivering industrial, commercial, and residential projects across Haryana and India with excellence.",
+    url: "https://www.sbninfra.in", // replace with your actual domain
+    siteName: "SBN Infra",
+    images: [
+      {
+        url: "https://www.sbninfra.in/why-choose-us.jpg", // replace with your OG image
+        width: 1200,
+        height: 630,
+        alt: "SBN INFRA PROJECT PRIVATE LIMITED",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
@@ -52,7 +97,7 @@ function HeroSection() {
     <div className=" z-10 my-auto flex flex-col px-4 md:px-10 py-8 h-fit relative rounded-lg overflow-hidden w-fit items-center gap-6 md:gap-8 justify-center">
       <div className=" absolute w-full inset-0 bg-neutral-600 -z-10 opacity-100"></div>
       <p className=" text-white text-4xl md:text-7xl text-center capitalize font-bold">
-        spirit to build beyond boundaries{' '}
+        spirit to build beyond boundaries{" "}
       </p>
       <p className=" text-gray-200 md:text-xl font-medium max-w-3xl text-center mx-auto">
         Building excellence with trust and innovation, delivering large-scale
@@ -67,7 +112,8 @@ function HeroSection() {
 function HeroSectionButn() {
   return (
     <Link
-      href={'/projects'}
+      prefetch={false}
+      href={"/projects"}
       className=" flex items-center justify-center gap-4 group px-8 py-3 hover:scale-105 border mt-6 cursor-pointer duration-200  hover:bg-white hover:text-black text-white text-lg font-semibold"
     >
       <p>View all Projects</p>
@@ -125,7 +171,8 @@ function ProjectCard({
 function ViewAllProjectBtn() {
   return (
     <Link
-      href={'/projects'}
+      prefetch={false}
+      href={"/projects"}
       className=" flex items-center justify-center gap-4 group px-8 py-3 hover:scale-105 border md:mt-4 cursor-pointer duration-200 text-black hover:border-primary-blue text-lg font-semibold"
     >
       <p>All Projects</p>
@@ -198,84 +245,38 @@ function ServiceCard({
 const servicesData = [
   {
     icon: Construction,
-    title: 'Turnkey Construction Solutions',
+    title: "Turnkey Construction Solutions",
     description:
-      'We specialize in the turnkey construction of all types of multi-storied buildings.',
+      "We specialize in the turnkey construction of all types of multi-storied buildings.",
     services: [
-      'Residential, Commercial, and Industrial construction',
-      'Institutional and Corporate Office development',
-      'Group Housing and Hospital building projects',
+      "Residential, Commercial, and Industrial construction",
+      "Institutional and Corporate Office development",
+      "Group Housing and Hospital building projects",
     ],
   },
   {
     icon: PencilRuler,
-    title: 'Design + Build Model',
+    title: "Design + Build Model",
     description:
-      'At SBN, we have integrated warehouse construction into our expertise. Our Design + Build model ensures:',
+      "At SBN, we have integrated warehouse construction into our expertise. Our Design + Build model ensures:",
     services: [
-      'Seamless execution from planning to completion',
-      'Cost-effective and time-efficient project delivery',
-      'A streamlined process for client satisfaction',
+      "Seamless execution from planning to completion",
+      "Cost-effective and time-efficient project delivery",
+      "A streamlined process for client satisfaction",
     ],
   },
   {
     icon: HardHat,
-    title: 'Allied Civil Works',
+    title: "Allied Civil Works",
     description:
-      'Our company engages in a wide array of allied civil works, covering diverse civil engineering activities.',
+      "Our company engages in a wide array of allied civil works, covering diverse civil engineering activities.",
     services: [
-      'Earthwork and Foundation construction',
-      'Pavement development and Drainage systems',
-      'Other critical civil infrastructure components',
+      "Earthwork and Foundation construction",
+      "Pavement development and Drainage systems",
+      "Other critical civil infrastructure components",
     ],
   },
 ];
-
-const headingVariants = {
-  slideIn: {
-    initial: { x: -100, opacity: 0 },
-    whileInView: {
-      x: 0,
-      opacity: 1,
-      transition: { type: 'spring', stiffness: 50 },
-    },
-  },
-  zoomIn: {
-    initial: { scale: 0.5, opacity: 0 },
-    whileInView: {
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 0.5, ease: 'easeOut' },
-    },
-  },
-};
-
-interface SectionHeadingProps {
-  title: string;
-  variant?: keyof typeof headingVariants;
-}
-
-function SectionHeading({ title, variant = 'slideIn' }: SectionHeadingProps) {
-  return (
-    <motion.div
-      initial={headingVariants[variant].initial}
-      whileInView={headingVariants[variant].whileInView}
-      viewport={{ once: true }}
-      className="relative w-fit mx-auto pb-2.5"
-    >
-      <p className=" text-4xl md:text-5xl font-bold text-neutral-800 text-center">
-        {title}
-      </p>
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: '100%' }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        viewport={{ once: true }}
-        className="absolute bottom-0 left-0 h-1 bg-primary-blue"
-      />
-    </motion.div>
-  );
-}
 
 function AboutUs2() {
   return (
@@ -301,6 +302,7 @@ function AboutUs2() {
           fostering collaboration.
         </p>
         <Link
+          prefetch={false}
           href="/about"
           className=" flex gap-3 group items-center px-3 md:px-6 py-2 md:py-4 bg-primary-blue  w-fit rounded-lg hover:bg-primary-blue/90 duration-200 cursor-pointer "
         >
@@ -321,19 +323,19 @@ function AboutUs2() {
 function WhyChooseUs() {
   const expertiseData = [
     {
-      title: 'Industry Expertise',
+      title: "Industry Expertise",
       description:
-        'Our extensive experience enables us to deliver top-tier projects on time and within budget.',
+        "Our extensive experience enables us to deliver top-tier projects on time and within budget.",
     },
     {
-      title: 'Sustainable Practices',
+      title: "Sustainable Practices",
       description:
-        'We believe in building a better future. Our projects incorporate sustainable materials and energy-efficient systems, reducing environmental impact.',
+        "We believe in building a better future. Our projects incorporate sustainable materials and energy-efficient systems, reducing environmental impact.",
     },
     {
-      title: 'Innovation-Driven',
+      title: "Innovation-Driven",
       description:
-        'Our team is always at the forefront of construction technology and modern techniques, embracing innovation.',
+        "Our team is always at the forefront of construction technology and modern techniques, embracing innovation.",
     },
   ];
   return (
@@ -373,16 +375,16 @@ function WhyChooseUs() {
 
 function LogoMarquee() {
   const logoArray = [
-    './logo/logo1.png',
-    './logo/logo2.svg',
-    './logo/logo3.png',
-    './logo/logo4.webp',
-    './logo/logo5.png',
-    './logo/logo6.webp',
-    './logo/logo7.svg',
-    './logo/logo8.png',
-    './logo/logo9.jpeg',
-    './logo/logo10.jpeg',
+    "./logo/logo1.png",
+    "./logo/logo2.svg",
+    "./logo/logo3.png",
+    "./logo/logo4.webp",
+    "./logo/logo5.png",
+    "./logo/logo6.webp",
+    "./logo/logo7.svg",
+    "./logo/logo8.png",
+    "./logo/logo9.jpeg",
+    "./logo/logo10.jpeg",
   ];
   return (
     <div className=" w-full py-8 md:py-16">
@@ -406,9 +408,9 @@ function LogoMarquee() {
 
 function ContactUs() {
   const stats = [
-    { label: 'Years of Experience', value: '12+' },
-    { label: 'Projects Completed', value: '45+' },
-    { label: 'Clients Satisfaction Rate', value: '95%' },
+    { label: "Years of Experience", value: "12+" },
+    { label: "Projects Completed", value: "45+" },
+    { label: "Clients Satisfaction Rate", value: "95%" },
   ];
 
   return (
@@ -422,6 +424,7 @@ function ContactUs() {
             </p>
           </div>
           <Link
+            prefetch={false}
             href="/contact-us"
             className=" flex gap-3 group items-center px-3 md:px-6 py-2 md:py-4 bg-neutral-50  w-fit rounded-lg hover:bg-neutral-100 duration-200 cursor-pointer "
           >

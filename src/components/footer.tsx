@@ -67,16 +67,24 @@ const Footer = () => {
             <div className=" flex gap-2 mt-4">
               <p>Phone :</p>
               <div className=" flex flex-col gap-2">
-                <Link href={"tel:+91-01284-264500"} className="">
+                <Link
+                  prefetch={false}
+                  href={"tel:+91-01284-264500"}
+                  className=""
+                >
                   +91-01284-264500
                 </Link>
-                <Link href={"tel:01284-23264412"} className="">
+                <Link prefetch={false} href={"tel:01284-23264412"} className="">
                   01284-23264412
                 </Link>
               </div>
             </div>
 
-            <Link className=" mt-2" href={"mailto:info@sbninfra.in"}>
+            <Link
+              prefetch={false}
+              className=" mt-2"
+              href={"mailto:info@sbninfra.in"}
+            >
               Email: info@sbninfra.in
             </Link>
           </div>
@@ -85,6 +93,7 @@ const Footer = () => {
             {navLinks.map(({ name, slug }) => {
               return (
                 <Link
+                  prefetch={false}
                   key={name}
                   className=" w-fit hover:text-white hover:underline text-gray-300"
                   href={slug}
@@ -95,12 +104,14 @@ const Footer = () => {
             })}
             <div className=" flex gap-4 items-center  mt-auto ">
               <Link
+                prefetch={false}
                 href={"http://www.linkedin.com/in/sbn-infra-691a68349"}
                 className="hover:scale-125 duration-200 cursor-pointer"
               >
                 <LinkedinIcon size={24} />
               </Link>
               <Link
+                prefetch={false}
                 href={
                   "https://www.instagram.com/sbninfra?igsh=MW95bDNnNHhmcHk2MA%3D%3D&utm_source=qr"
                 }

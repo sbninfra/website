@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type NavElement = {
   label: string;
@@ -12,11 +12,11 @@ type NavElement = {
 };
 
 const navElements: NavElement[] = [
-  { label: 'Home', path: '/' },
-  { label: 'Projects', path: '/projects' },
-  { label: 'Careers', path: '/careers' },
-  { label: 'About Us', path: '/about-us' },
-  { label: 'Contact Us', path: '/contact-us' },
+  { label: "Home", path: "/" },
+  { label: "Projects", path: "/projects" },
+  { label: "Careers", path: "/careers" },
+  { label: "About Us", path: "/about-us" },
+  { label: "Contact Us", path: "/contact-us" },
 ];
 
 const NavBar = () => {
@@ -34,6 +34,7 @@ const NavBar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navElements.map((element) => (
             <Link
+              prefetch={false}
               key={element.path}
               href={element.path}
               className="text-black text-lg hover:underline underline-offset-4"
@@ -71,6 +72,7 @@ const NavBar = () => {
                 transition={{ duration: 0.2, delay: index * 0.1 }}
               >
                 <Link
+                  prefetch={false}
                   href={element.path}
                   className="text-black text-lg font-semibold hover:text-gray-700 transition"
                   onClick={() => setIsOpen(false)}

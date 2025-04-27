@@ -65,6 +65,7 @@ function HeroSection() {
         and professional growth. If you&apos;re ready to build a rewarding
         career with us, send your resume to{" "}
         <Link
+          prefetch={false}
           href={"mailto:info@sbninfra.in"}
           className=" font-semibold text-blue-600"
         >
